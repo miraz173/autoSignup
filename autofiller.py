@@ -35,7 +35,7 @@ sign_up_btn.click()
 #clicks ^above^ can be avoided by directly using "https://auth.decoraan.com/sign-up" URL
 wait.until(EC.presence_of_element_located((By.ID, "username")))
 
-#optional, as BD is selected by default
+#selecting BD from list is optional, as BD is selected by default
 # driver.find_element(By.XPATH, "//div[contains(@class,'custom-select')]").click()
 # WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(normalize-space(),'Bangladesh')]"))).click()
 
@@ -50,7 +50,7 @@ driver.find_element(By.ID, "confirmpassword").send_keys(password)
 
 driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
-# --- OTP page ---
+# fir OTP page
 otp_boxes = wait.until(EC.visibility_of_all_elements_located(
     (By.CLASS_NAME, "otp-form-input")
 ))
